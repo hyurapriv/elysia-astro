@@ -1,0 +1,10 @@
+---
+import PostList from '../../components/PostList';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Portal Post Modern - Semua Post">
+  <div class="max-w-7xl mx-auto">
+    <PostList client:load />
+  </div>
+</Layout>

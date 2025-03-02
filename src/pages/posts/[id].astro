@@ -1,0 +1,15 @@
+---
+// At the top of your [id].astro file
+export const prerender = false;
+
+import PostDetail from '../../components/PostDetail';
+import Layout from '../../layouts/Layout.astro';
+
+const { id } = Astro.params;
+---
+
+<Layout title="Portal Post Modern - Detail Post">
+  <div class="max-w-4xl mx-auto">
+    <PostDetail client:load postId={id} />
+  </div>
+</Layout>
